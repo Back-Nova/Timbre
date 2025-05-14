@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Horarios del Viernes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+    
+</head>
+<body>
+    <h1>Horarios del Viernes</h1>
+
+    <div class="container">
+        <!-- Panel izquierdo: Agregar Horario -->
+        <div class="panel">
+            <h2>Agregar Horario</h2>
+            <form method="POST">
+                <input type="hidden" name="action" value="agregar">
+
+                <label>
+                    Hora:
+                    <input type="number" name="hora" min="0" max="23" required>
+                </label>
+
+                <label>
+                    Minuto:
+                    <input type="number" name="minuto" min="0" max="59" required>
+                </label>
+
+                <label>
+                    Habilitado:
+                    <input type="checkbox" name="habilitado" checked>
+                </label>
+
+                <button type="submit">Agregar</button>
+            </form>
+        </div>
+
+        <!-- Panel derecho: Horarios existentes -->
+        <div class="panel">
+            <h2>Horarios existentes</h2>
+            {% for id, hora, minuto, habilitado in horarios %}
+                <form method="POST">
+                    <input type="hidden" name="id" value="{{ id }}">
+                    
+                    <label>
+                        Hora:
+                        <input type="number" name="hora" value="{{ hora }}" min="0" max="23" required>
+                    </label>
+
+                    <label>
+                        Minuto:
+                        <input type="number" name="minuto" value="{{ minuto }}" min="0" max="59" required>
+                    </label>
+
+                    <label>
+                        Habilitado:
+                        <input type="checkbox" name="habilitado" {% if habilitado %}checked{% endif %}>
+                    </label>
+
+                    <button type="submit" name="action" value="editar">Guardar</button>
+                    <button type="submit" name="action" value="eliminar" onclick="return confirm('¿Seguro que querés eliminar este horario?')">Eliminar</button>
+                </form>
+            {% else %}
+                <p class="no-horarios">No hay horarios cargados aún.</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #dfdfdf;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.form-container {
+    display: flex;
+    gap: 50px;
+}
+
+.add-time {
+    width: 30%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    max-height: 300px
+}
+
+.add-time h3 {
+    margin-bottom: 20px;
+}
+
+.input {
+    margin-bottom: 15px;
+}
+
+.input label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#agregar-horario {
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#agregar-horario:hover {
+    background-color: #000;
+}
+
+.tabla-container {
+    width: 60%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-container th, .tabla-container td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.tabla-container th {
+    background-color: #f0f0f0;
+}
+
+.tabla-container td input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+button {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+button.editar {
+    background-color: #4CAF50;
+}
+
+button.editar:hover {
+    background-color: #45a049;
+}
+
+button.eliminar:hover {
+    background-color: #e53935;
+}

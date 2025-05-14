@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Registro</title>
+</head>
+<body>
+    <form action="{{ url_for('registrar_usuario') }}" method="POST">
+        <div class="login-box">
+            <div class="login-header">
+                <header>Registro</header>
+            </div>
+            <div class="input-box">
+                <input type="text" name="nombre" class="input-field" placeholder="Nombre " required>
+            </div>
+            <div class="input-box">
+                <input type="email" name="gmail" class="input-field" placeholder="Gmail" required>
+            </div>
+            <div class="input-box">
+                <input type="password" name="contrasena" class="input-field" placeholder="Contraseña" required>
+            </div>
+            <div class="input-box">
+                <input type="password" name="confirmar" class="input-field" placeholder="Confirmar contraseña" required>
+            </div>
+            <div class="input-submit">
+                <button class="submit-btn" type="submit" >Registrarse</button>
+            </div>
+            <div class="sign-up-link">
+                <p>¿Ya tienes una cuenta? <a href="{{ url_for('login') }}">Iniciar sesión</a></p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

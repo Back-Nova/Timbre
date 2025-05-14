@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Iniciar sesión</title>
+</head>
+<body>
+    <div class="login-box">
+        <div class="login-header">
+            <header>Iniciar sesión</header>
+        </div>
+        <form action="{{ url_for('iniciar_sesion') }}" method="POST">
+            <div class="input-box">
+                <input type="email" name="gmail" class="input-field" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+                <input type="password" name="contrasena" class="input-field" placeholder="Contraseña" required>
+            </div>
+            <div class="forgot">
+                <section>
+                    <input type="checkbox" id="check">
+                    <label for="check">Recordar contraseña</label>
+                </section>
+                <section>
+                    <a href="{{ url_for('olvide_contraseña') }}">Olvidé mi contraseña</a>
+                </section>
+            </div>
+            <div class="input-submit">
+                <button type="submit" class="submit-btn">Iniciar sesión</button>
+            </div>
+        </form>
+        <div class="sign-up-link">
+            <p>¿No tienes cuenta? <a href="{{ url_for('registro') }}">Registrarse</a></p>
+        </div>
+    </div>
+</body>
+</html>

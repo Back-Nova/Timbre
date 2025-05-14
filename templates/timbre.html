@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timbre</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='timbre.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Timbre</h1>
+        <div class="dias-grid">
+            <a href="{{ url_for('lunes') }}" class="dia">Lunes</a>
+            <a href="{{ url_for('Martes') }}" class="dia">Martes</a>
+            <a href="{{ url_for('Miercoles') }}" class="dia">Miércoles</a>
+            <a href="{{ url_for('Jueves') }}" class="dia">Jueves</a>
+            <a href="{{ url_for('Viernes') }}" class="dia">Viernes</a>
+
+            <!-- <a href="{{ url_for('lunes') }}" class="dia">Apartado</a>
+            <a href="{{ url_for('lunes') }}" class="dia">Apartado</a> -->
+        </div>
+    </div>
+</body>
+</html>

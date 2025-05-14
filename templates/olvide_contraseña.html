@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Recuperar Contraseña</title>
+</head>
+<body>
+    <div class="login-box">
+        <div class="login-header">
+            <header>Recuperar Contraseña</header>
+        </div>
+        <form action="/enviar_enlace" method="POST">
+            <div class="input-box">
+                <input type="email" name="gmail" class="input-field" placeholder="Ingresa tu email" autocomplete="off" required>
+            </div>
+            <div class="input-submit">
+                <a href="Restablecer_Contrasena.html"><button type="submit" class="submit-btn">Enviar Enlace</button></a>
+            </div>
+        </form>
+        <div class="sign-up-link">
+            <p><a href="{{ url_for('vuelve_login') }}">Volver al Login</a></p>
+        </div>
+    </div>
+</body>
+</html>
